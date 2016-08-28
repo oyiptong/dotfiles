@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/oyiptong/Projects/blogs/olivieryiptong.com/templates'
+let g:netrw_dirhist_2='/Users/oyiptong/Projects/up-projects/activity-streams/.git/hooks'
+let g:netrw_dirhist_3='/Users/oyiptong/Projects/up-projects/activity-streams/data/content'
