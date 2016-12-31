@@ -2,16 +2,11 @@
 " Vundle first
 set nocompatible
 filetype off
-set rtp+=~/.config/nvim/bundle/vundle/
-if has('nvim')
-    let s:editor_root=expand("~/.config/nvim")
-else
-    let s:editor_root=expand("~/.vim")
-endif
-call vundle#rc(s:editor_root . '/bundle')
-Plugin 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'elzr/vim-json'
-Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'chase/vim-ansible-yaml'
@@ -28,14 +23,15 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rust-lang/rust.vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'chrisbra/csv.vim'
+call vundle#end()
 
-filetype on
-syntax on
 filetype indent on
 filetype plugin on
+syntax on
 
 " syntax highlighting for less
 au BufRead,BufNewFile *.less setfiletype css
@@ -66,7 +62,7 @@ set number
 set backspace=indent,eol,start
 set scrolloff=5
 if exists('+colorcolumn')
-    set colorcolumn=80
+    set colorcolumn=100
 endif
 
 set grepprg=ack
@@ -139,7 +135,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_json_checkers = ['jsonlint']
 autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : findfile('.jscsrc', '.;') != '' ? ['jshint', 'jscs'] : ['jshint']
