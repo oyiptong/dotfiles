@@ -86,19 +86,22 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=/usr/bin/vim
 alias sc="npm run -s sanity-check --"
 export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
-
 alias ag='ag --pager="less -XFR"'
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
-export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
-export JAVA_HOME=$JAVA8_HOME
+export RBENV_ROOT="$HOME/.rbenv"
+export PATH="$PYENV_ROOT/bin:$RBENV_ROOT/bin:$PATH"
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export JAVA_OPTS="-Xms128m -Xmx8192m -XX:MaxPermSize=1024m -XX:ReservedCodeCacheSize=1024m -XX:+UseCompressedOops"
 export PATH=$HOME/.bin:$JAVA_HOME/bin:$PATH
+export PATH="$PATH:$HOME/Projects/depot_tools"
 eval "$(rbenv init -)"
+eval "$(pyenv init -)"
 
 source $HOME/.cargo/env
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+

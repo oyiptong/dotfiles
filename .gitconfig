@@ -15,5 +15,3 @@
         st = status --short --branch
 [push]
 	default = simple
-[credential]
-	helper = osxkeychain
