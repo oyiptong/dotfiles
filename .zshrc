@@ -89,6 +89,7 @@ export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 
 alias ag='ag --pager="less -XFR"'
+alias rg='rg -i --color always'
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export PYENV_ROOT="$HOME/.pyenv"

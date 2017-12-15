@@ -1,0 +1,2 @@
+#!/bin/bash
+nohup /usr/local/Cellar/emacs-plus/25.3/Emacs.app/Contents/MacOS/Emacs 2>&1 > /dev/null &

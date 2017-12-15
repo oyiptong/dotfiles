@@ -17,3 +17,7 @@
 	default = simple
 [credential]
 	helper = osxkeychain
+[core]
+	precomposeunicode = true
+	excludesfile = /Users/olivier_yiptong/.gitignore_global
+	sparseCheckout = true
