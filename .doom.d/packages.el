@@ -52,3 +52,4 @@
 
 (package! clang-format+)
 (package! ycmd)
+(package! plantuml-mode)

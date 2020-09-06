@@ -7,7 +7,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "Olivier Yiptong"
-      user-mail-address "oyiptong@google.com")
+      user-mail-address "olivier.yiptong@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -53,3 +53,6 @@
 ;; they are implemented.
 
 (setq doom-leader-key "\\")
+(setq doom-localleader-key "|")
+(require 'plantuml-mode)
+(setq org-plantuml-jar-path "~/.bin/plantuml/plantuml.jar")
